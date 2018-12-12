@@ -1,0 +1,30 @@
+<package format="3">
+  <name>rqt2_demo_nodes</name>
+  <version>0.4.8</version>
+  <description>rqt2_demo_nodes provides useful example nodes for testing rqt plugins.</description>
+  <maintainer email="mikeblautman@gmail.com">Mike Lautman</maintainer>
+
+  <license>BSD</license>
+
+  <url type="website">http://wiki.ros.org/rqt2_demo_nodes</url>
+  <url type="repository">https://github.com/mlautman/rqt2_demo_nodes</url>
+  <url type="bugtracker">https://github.com/mlautman/rqt2_demo_nodes/issues</url>
+
+  <author>Mike Lautman</author>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>rosidl_default_generators</buildtool_depend>
+
+  <exec_depend>rqt_gui</exec_depend>
+  <exec_depend>rqt_gui_py</exec_depend>
+  <exec_depend>rqt_py_common</exec_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <export>
+    <architecture_independent/>
+    <rqt_gui plugin="${prefix}/plugin.xml"/>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
