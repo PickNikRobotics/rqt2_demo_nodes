@@ -6,14 +6,15 @@ find_package(ament_cmake_python REQUIRED)
 find_package(rqt_py_common REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
-set(srv_files
+set(rosidl_files
   "srv/Sum.srv"
+  "msg/Val.msg"
+  "msg/ArrayVal.msg"
 )
 
 rosidl_generate_interfaces(${PROJECT_NAME}
-  ${srv_files}
-  DEPENDENCIES rqt_py_common
-  ADD_LINTER_TESTS
+  ${rosidl_files}
+  DEPENDENCIES
 )
 
 ament_python_install_package(${PROJECT_NAME}
